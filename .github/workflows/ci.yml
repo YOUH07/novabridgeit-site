@@ -1,0 +1,19 @@
+name: NovaBridge CI Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-runner:
+    runs-on: self-hosted
+
+    steps:
+      - name: Vérifier le dépôt
+        uses: actions/checkout@v4
+
+      - name: Afficher les fichiers HTML
+        run: |
+          echo "Fichiers du dépôt :"
+          ls -la
